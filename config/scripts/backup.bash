@@ -14,7 +14,9 @@ function git_push {
 pushd $LOCAL_CONFIG_REPO
 git add -A .
 git lfs status
-yes_or_no "Continue?" && git commit -m "chore: Updated config at $(date)"
+yes_or_no "Continue?"
+git commit -m "chore: Updated config at $(date)"
+git push
 popd
 }
 
