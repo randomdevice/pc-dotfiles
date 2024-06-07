@@ -1,3 +1,5 @@
+*.socket
+*.service
 */kwallet*
 */GIMP*
 */**/kwallet*
