@@ -1,15 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<actions>
-<action>
-	<icon>utilities-terminal</icon>
-	<name>Open Terminal Here</name>
-	<submenu></submenu>
-	<unique-id>1717293467716546-1</unique-id>
-	<command>exo-open --working-directory %f --launch TerminalEmulator</command>
-	<description>Example for a custom action</description>
-	<range></range>
-	<patterns>*</patterns>
-	<startup-notify/>
-	<directories/>
-</action>
-</actions>
+version https://git-lfs.github.com/spec/v1
+oid sha256:a5e964fd9fa8baedc3f7bb115258b56dcc1be61cf38a66fcc349c160976e7ef4
+size 419

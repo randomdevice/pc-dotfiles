@@ -6,3 +6,5 @@
 */**/GIMP*
 */systemd
 */**/systemd
+*/**/cookie
+config/pulse/cookie

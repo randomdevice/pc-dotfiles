@@ -107,7 +107,7 @@ Column {
 
                 background: Rectangle {
                     radius: config.RoundCorners / 2
-                    color: "#444"
+		    color: "#444"
                     layer.enabled: true
                     layer.effect: DropShadow {
                         transparentBorder: true

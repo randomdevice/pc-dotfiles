@@ -213,7 +213,7 @@ Pane {
                                  config.BackgroundImageAlignment == "right" ?
                                  Image.AlignRight :
                                  config.BackgroundImageAlignment == "center" ?
-                                 Image.AlignHCenter : undefined
+                                 Image.AlignHCenter : 0
 
             source: config.background || config.Background
             fillMode: config.ScaleImageCropped == "true" ? Image.PreserveAspectCrop : Image.PreserveAspectFit

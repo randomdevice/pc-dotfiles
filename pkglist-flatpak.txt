@@ -1,0 +1,5 @@
+Authenticator	com.belmoussaoui.Authenticator	4.4.0	stable	system
+Heroic Games Launcher	com.heroicgameslauncher.hgl	v2.14.1	stable	system
+Obsidian	md.obsidian.Obsidian	1.6.3	stable	system
+Image Viewer	org.gnome.Loupe	46.2	stable	system
+Clocks	org.gnome.clocks	46.0	stable	system
