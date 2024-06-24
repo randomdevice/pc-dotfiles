@@ -1,5 +1,10 @@
+Warp	app.drey.Warp	0.7.0	stable	system
 Authenticator	com.belmoussaoui.Authenticator	4.4.0	stable	system
+Flatseal	com.github.tchx84.Flatseal	2.2.0	stable	system
 Heroic Games Launcher	com.heroicgameslauncher.hgl	v2.14.1	stable	system
+Hieroglyphic	io.github.finefindus.Hieroglyphic	1.1.0	stable	system
 Obsidian	md.obsidian.Obsidian	1.6.3	stable	system
+Calculator	org.gnome.Calculator	46.1	stable	system
 Image Viewer	org.gnome.Loupe	46.2	stable	system
 Clocks	org.gnome.clocks	46.0	stable	system
+Apostrophe	org.gnome.gitlab.somas.Apostrophe	3.0	stable	system

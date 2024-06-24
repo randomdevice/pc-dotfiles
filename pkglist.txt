@@ -47,15 +47,18 @@ libva-mesa-driver
 libvirt
 linux
 linux-firmware
+man-db
 meson
 mlocate
 nano
+neovim
 network-manager-applet
 networkmanager
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji
 noto-fonts-extra
+npm
 ntfs-3g
 nwg-look
 otf-font-awesome
@@ -74,6 +77,7 @@ qt5-quickcontrols2
 qt5-wayland
 qt6-wayland
 rhythmbox
+ripgrep
 rofi-emoji-git
 rofi-wayland
 sddm

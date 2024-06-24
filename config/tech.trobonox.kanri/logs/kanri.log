@@ -1,0 +1,1 @@
+[2024-06-23][19:09:43][WARN][tauri_plugin_store] Failed to load store ".kanri.dat" from disk: No such file or directory (os error 2). Falling back to default values.
