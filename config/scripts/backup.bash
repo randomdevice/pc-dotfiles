@@ -14,9 +14,7 @@ function git_push {
 pushd $DOTFILE_REPO
 git add -A .
 git lfs status
-yes_or_no "Continue?"
-git commit -m "chore: Updated config at $(date)"
-git push
+yes_or_no "Continue?" && git commit -m "chore: Updated config at $(date)" && git push
 popd
 }
 

@@ -20,6 +20,7 @@ filetype plugin on          " clear background
 set cursorline              " highlight current cursorline
 set ttyfast                 " Speed up scrolling in Vim
 highlight Normal ctermbg=NONE guibg=NONE " Disable Nvim background colors
+set complete+=kspell
 " set spell                 " enable spell check (may need to download language package)
 " set noswapfile            " disable creating swap file
 " set backupdir=~/.cache/vim " Directory to store backup files.
@@ -31,13 +32,29 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 " LSP
+Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
 
 " Git Fugitive
 Plug 'tpope/vim-fugitive'
 
+" Vim Airline bar
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+" Nerd font icons
+Plug 'ryanoasis/vim-devicons'
+
 call plug#end()
+
+" Set Airline Color Theme
+let g:airline_theme='behelit'
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
 
 let mapleader = " "
 
@@ -63,7 +80,6 @@ nnoremap <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
 function! s:on_lsp_buffer_enabled() abort
     setlocal omnifunc=lsp#complete
     setlocal signcolumn=yes
-    if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
     nmap <buffer> ld <plug>(lsp-definition)
     nmap <buffer> ls <plug>(lsp-document-symbol-search)
     nmap <buffer> lS <plug>(lsp-workspace-symbol-search)

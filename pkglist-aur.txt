@@ -1,6 +1,5 @@
 hyprpicker
 rofi-emoji-git
-swww
 wlogout
 wttrbar
 yay

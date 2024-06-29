@@ -8,3 +8,4 @@
 */**/systemd
 */**/cookie
 config/pulse/cookie
+config/tmux/plugins
