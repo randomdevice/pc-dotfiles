@@ -9,3 +9,5 @@
 */**/cookie
 config/pulse/cookie
 config/tmux/plugins
+config/*kanri*
+config/evolution/*/**
