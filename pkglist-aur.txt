@@ -1,4 +1,7 @@
+cmatrix-git
+firefox-pwa
 hyprpicker
+phinger-cursors
 rofi-emoji-git
 wlogout
 wttrbar

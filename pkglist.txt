@@ -1,12 +1,15 @@
 amd-ucode
 base
 base-devel
+bc
 blueman
 bluez-utils
+btop
 btrfs-progs
 catfish
 cliphist
 cmake
+cmatrix-git
 cpio
 dkms
 dmidecode
@@ -17,6 +20,7 @@ efibootmgr
 exfatprogs
 file-roller
 firefox
+firefox-pwa
 flatpak
 font-manager
 gamemode
@@ -41,6 +45,7 @@ hyprwayland-scanner
 intel-media-driver
 iptables-nft
 iwd
+jq
 kitty
 libosinfo
 libpulse
@@ -68,6 +73,7 @@ nwg-look
 otf-font-awesome
 papirus-icon-theme
 pavucontrol
+phinger-cursors
 pipewire
 pipewire-alsa
 pipewire-jack

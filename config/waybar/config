@@ -5,7 +5,7 @@
     "margin": "20 20 0 20",
     // "width": 1280, // Waybar width
     // Choose the order of the modules
-    "modules-left": ["cpu", "custom/mem", "hyprland/workspaces", ],
+    "modules-left": ["cpu", "custom/mem", "custom/llm", "hyprland/workspaces", ],
     "modules-center": ["clock"],
     "modules-right": [ "custom/weather", "pulseaudio",  "tray"],
 
@@ -17,9 +17,9 @@
     "hyprland/workspaces": {
  	"format": "{icon}",
         "format-icons": {
-	   "active": "🔲",
-           "default": "🔳",
-	},     
+	       "active": "󰆦",
+           "default": "󰆧",
+	    },     
         "disable-scroll": true,
         "persistent-workspaces": {
             "1": [],
@@ -30,8 +30,8 @@
 
     "hyprland/language": {
         "format": "{} ",
-	"min-length": 5,
-	"tooltip": false
+     	"min-length": 5,
+	    "tooltip": false
     },
 
     "keyboard-state": {
@@ -51,6 +51,12 @@
         "exec-if": "exit 0",                  			// always run; consider advanced run conditions
         "on-click": "kitty sh -c 'yay; echo Done - Press enter to exit; read'; pkill -SIGRTMIN+8 waybar", // update system
         "signal": 8,
+        "tooltip": false,
+    },
+
+    "custom/llm": {
+        "format": "󱜙",
+        "on-click": "firefoxpwa site launch 01J1NZGASQRSDRMR89ZNYXRREK",
         "tooltip": false,
     },
 
@@ -84,7 +90,7 @@
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "reverse-scrolling": 1,
-        "format": "{volume}% {icon} {format_source}",
+        "format": "{volume}% {icon}  {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": "婢 {format_source}",
@@ -100,13 +106,14 @@
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol",
-        "min-length": 13,
+        "min-length": 10,
     },
 
     "custom/mem": {
         "format": "{}  ",
         "interval": 3,
         "exec": "free -h | awk '/Mem:/{printf $3}'",
+        "on-click": "kitty sh -c 'btop'",
         "tooltip": false,
     },
 

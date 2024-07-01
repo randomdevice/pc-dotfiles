@@ -2,7 +2,7 @@
     border: none;
     border-radius: 0;
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: Noto Sans Mono;
+    font-family: JetBrainsMono Nerd Font;
     min-height: 20px;
 }
 
@@ -15,7 +15,7 @@ window#waybar.hidden {
 }
 
 #workspaces {
-    margin-right: 10px;
+    margin-right: 0px;
     padding-right: 0px;
     padding-left: 0px;
     border-radius: 10px;
@@ -26,14 +26,15 @@ window#waybar.hidden {
 
 #workspaces button {
     transition: none;
-    color: #7c818c;
+    color: #FFFFFF;
     background: transparent;
-    padding: 5px;
-    font-size: 14px;
+    padding-right: 6px;
+    padding-left: 6px;
+    font-size: 18px;
 }
 
 #workspaces button.persistent {
-    color: #7c818c;
+    color: #FFFFFF;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
@@ -86,6 +87,26 @@ window#waybar.hidden {
     background: #383c4a;
 }
 
+#custom-llm {
+    margin-right: 8px;
+    padding-left: 8px;
+    padding-right: 12px;
+    border-radius: 10px;
+    transition: none;
+    color: #ffffff;
+    border-bottom: 3px solid #303030;
+    background: #474747;
+}
+
+#custom-llm:hover {
+    transition: none;
+    box-shadow: inherit;
+    text-shadow: inherit;
+    border-radius: 10px;
+    color: #383c4a;
+    background: #7c818c;
+}
+
 #mode {
     padding-left: 16px;
     padding-right: 16px;
@@ -132,6 +153,15 @@ window#waybar.hidden {
     color: #2a5c45;
 }
 
+#pulseaudio:hover {
+    transition: none;
+    box-shadow: inherit;
+    text-shadow: inherit;
+    border-radius: 10px;
+    color: #383c4a;
+    background: #7c818c;
+}
+
 #custom-mem {
     margin-right: 8px;
     padding-left: 16px;
@@ -141,6 +171,15 @@ window#waybar.hidden {
     color: #ffffff;
     border-bottom: 3px solid #303030;
     background: #474747;
+}
+
+#custom-mem:hover {
+    transition: none;
+    box-shadow: inherit;
+    text-shadow: inherit;
+    border-radius: 10px;
+    color: #383c4a;
+    background: #7c818c;
 }
 
 #cpu {
