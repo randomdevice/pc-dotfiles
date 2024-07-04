@@ -51,3 +51,5 @@
 *.lz filter=lfs diff=lfs merge=lfs -text
 *.lzma filter=lfs diff=lfs merge=lfs -text
 config/cliphist/cliphist-rofi-img filter=lfs diff=lfs merge=lfs -text
+*.xml filter=lfs diff=lfs merge=lfs -text
+*.json filter=lfs diff=lfs merge=lfs -text

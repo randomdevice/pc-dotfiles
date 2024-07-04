@@ -1,0 +1,7 @@
+[Default Applications]
+application/pdf=firefox.desktop
+x-scheme-handler/mochi=mochi.desktop
+
+[Added Associations]
+application/pdf=firefox.desktop;
+image/webp=gimp.desktop;

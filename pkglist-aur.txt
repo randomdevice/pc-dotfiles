@@ -1,0 +1,10 @@
+cmatrix-git
+firefox-pwa
+hyprpicker
+pacseek
+phinger-cursors
+rofi-emoji-git
+wlogout
+wttrbar
+yay
+yay-debug
