@@ -48,6 +48,7 @@ iptables-nft
 iwd
 jq
 kitty
+lazygit
 libosinfo
 libpulse
 libva-intel-driver
