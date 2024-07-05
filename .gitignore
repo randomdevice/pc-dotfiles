@@ -18,6 +18,7 @@ config/pulse/cookie
 **/tech.trobonox.kanri/**
 config/evolution/*/**
 config/dconf/user
+config/inkscape/**
 
 # Prerequisites
 *.d
