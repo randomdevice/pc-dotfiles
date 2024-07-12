@@ -28,6 +28,7 @@ gamescope
 gimp
 git
 git-lfs
+glmark2
 gnome-keyring
 gpart
 gparted
@@ -51,6 +52,7 @@ jq
 kitty
 lazygit
 lib2geom
+lib32-nvidia-utils
 libosinfo
 libpulse
 libva-intel-driver
@@ -73,6 +75,7 @@ noto-fonts-emoji
 noto-fonts-extra
 npm
 ntfs-3g
+nvidia
 nwg-look
 otf-font-awesome
 pacseek
