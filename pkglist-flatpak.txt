@@ -7,6 +7,7 @@ Bottles	com.usebottles.bottles	51.13	stable	system
 Hieroglyphic	io.github.finefindus.Hieroglyphic	1.1.0	stable	system
 Warehouse	io.github.flattool.Warehouse	1.6.4	stable	system
 WebCord	io.github.spacingbat3.webcord	4.9.2	stable	system
+Impression	io.gitlab.adhami3310.Impression	3.2.0	stable	system
 Podman Desktop	io.podman_desktop.PodmanDesktop	1.11.1	stable	system
 Obsidian	md.obsidian.Obsidian	1.6.3	stable	system
 Gaphor	org.gaphor.Gaphor	2.26.0	stable	system
