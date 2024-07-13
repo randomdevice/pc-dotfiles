@@ -3,6 +3,7 @@ Authenticator	com.belmoussaoui.Authenticator	4.4.0	stable	system
 Flatseal	com.github.tchx84.Flatseal	2.2.0	stable	system
 Heroic Games Launcher	com.heroicgameslauncher.hgl	v2.14.1	stable	system
 OBS Studio	com.obsproject.Studio	30.1.2	stable	system
+Bottles	com.usebottles.bottles	51.13	stable	system
 Hieroglyphic	io.github.finefindus.Hieroglyphic	1.1.0	stable	system
 Warehouse	io.github.flattool.Warehouse	1.6.4	stable	system
 WebCord	io.github.spacingbat3.webcord	4.9.2	stable	system
