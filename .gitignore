@@ -19,6 +19,7 @@ config/pulse/cookie
 config/evolution/*/**
 config/dconf/user
 config/inkscape/**
+config/WebCord/**
 
 # Prerequisites
 *.d
