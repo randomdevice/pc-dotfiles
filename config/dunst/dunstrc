@@ -24,7 +24,7 @@
     # dynamic width from 0 to 300
     # width = (0, 300)
     # constant width of 300
-    width = 300
+    width = 350
 
     # The maximum height of a single notification, excluding the frame.
     height = 300
@@ -45,7 +45,7 @@
 
     # Turn on the progess bar. It appears when a progress hint is passed with
     # for example dunstify -h int:value:12
-    progress_bar = true
+    progress_bar = false 
 
     # Set the progress bar height. This includes the frame, so make sure
     # it's at least twice as big as the frame width.
@@ -82,11 +82,11 @@
     horizontal_padding = 10
 
     # Padding between text and icon.
-    text_icon_padding = 3
+    text_icon_padding = 5
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
-    frame_width = 3
+    frame_width = 0
 
     # Defines color of the frame around the notification window.
     frame_color = "#303030"
@@ -111,7 +111,7 @@
 
     ### Text ###
 
-    font =  Roboto Mono Medium 10
+    font = RobotoMono Nerd Font Bold 12
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
@@ -174,7 +174,7 @@
     ignore_newline = no
 
     # Stack together notifications with the same content
-    stack_duplicates = true
+    stack_duplicates = true 
 
     # Hide the count of stacked notifications with the same content
     hide_duplicate_count = false
@@ -193,7 +193,7 @@
     min_icon_size = 0
 
     # Scale larger icons down to this size, set to 0 to disable
-    max_icon_size = 64
+    max_icon_size = 40
 
     # Paths to default icons.
     icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
@@ -229,7 +229,7 @@
     # corners.
     # The radius will be automatically lowered if it exceeds half of the
     # notification height to avoid clipping text and/or icons.
-    corner_radius = 5
+    corner_radius = 10
 
     # Ignore the dbus closeNotification message.
     # Useful to enforce the timeout set by dunst configuration. Without this

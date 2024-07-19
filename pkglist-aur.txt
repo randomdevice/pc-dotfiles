@@ -4,6 +4,7 @@ hyprpicker
 pacseek
 phinger-cursors
 rofi-emoji-git
+webcord-bin
 wlogout
 wttrbar
 yay

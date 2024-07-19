@@ -52,7 +52,7 @@
 
     "custom/llm": {
         "format": "󱜙",
-        "on-click": "firefoxpwa site launch 01J1NZGASQRSDRMR89ZNYXRREK",
+        "on-click": "firefoxpwa site launch 01J2SN9MAJ4RP38JWS4T5BKXV7",
         "tooltip": false,
     },
 
@@ -88,8 +88,8 @@
         "reverse-scrolling": 1,
         "format": "{volume}% {icon}  {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": "婢 {format_source}",
+        "format-bluetooth-muted": "{volume}% 󰝟 {icon} {format_source}",
+        "format-muted": "{volume}% 󰝟 {format_source}",
         "format-source": "{volume}% ",
         "format-source-muted": "",
         "format-icons": {

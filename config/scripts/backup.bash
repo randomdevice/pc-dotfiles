@@ -21,7 +21,9 @@ function git_push {
 DOTFILE_REPO=$HOME/repo_local/pc-dotfiles
 mkdir -p $DOTFILE_REPO/config
 mkdir -p $DOTFILE_REPO/usr/share/sddm/themes/sugar-dark
+cp -rv $HOME/.bashrc $DOTFILE_REPO/.bashrc
 cp -rv $HOME/.config/* $DOTFILE_REPO/config/
+sudo cp -r /etc/polkit-1/rules.d/10-udisks2.rules $DOTFILE_REPO/10-udisks2.rules
 sudo cp -rv /usr/share/sddm/themes/sugar-dark/* $DOTFILE_REPO/usr/share/sddm/themes/sugar-dark/
 pacman -Qqe > $DOTFILE_REPO/pkglist.txt
 pacman -Qqem > $DOTFILE_REPO/pkglist-aur.txt

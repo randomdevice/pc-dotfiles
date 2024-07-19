@@ -1,7 +1,8 @@
 [Default Applications]
-application/pdf=firefox.desktop
+application/pdf=org.gnome.Papers.desktop
 x-scheme-handler/mochi=mochi.desktop
 
 [Added Associations]
-application/pdf=firefox.desktop;
+application/pdf=org.gnome.Papers.desktop;firefox.desktop;
 image/webp=gimp.desktop;
+image/jpeg=org.gnome.Loupe.desktop;
