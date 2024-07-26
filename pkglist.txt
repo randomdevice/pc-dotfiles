@@ -13,6 +13,7 @@ cmake
 cmatrix-git
 cpio
 cuda
+davinci-resolve
 dkms
 dmidecode
 dnsmasq
@@ -130,6 +131,7 @@ wget
 wireless_tools
 wireplumber
 wlogout
+wlrobs
 wofi
 wttrbar
 xdg-desktop-portal-gtk
