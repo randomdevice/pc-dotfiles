@@ -87,11 +87,11 @@ function! s:on_lsp_buffer_enabled() abort
     nmap <buffer> li <plug>(lsp-implementation)
     nmap <buffer> lt <plug>(lsp-type-definition)
     nmap <buffer> <leader>rn <plug>(lsp-rename)
-    nmap <buffer> [l <plug>(lsp-previous-diagnostic)
-    nmap <buffer> ]l <plug>(lsp-next-diagnostic)
+    nmap <buffer> ldp <plug>(lsp-previous-diagnostic)
+    nmap <buffer> ld <plug>(lsp-next-diagnostic)
     nmap <buffer> lh <plug>(lsp-hover)
-    inoremap <buffer> <expr><c-f> lsp#scroll(+4)
-    inoremap <buffer> <expr><c-d> lsp#scroll(-4)
+    inoremap <buffer> <expr><]> lsp#scroll(+4)
+    inoremap <buffer> <expr><[> lsp#scroll(-4)
 
     let g:lsp_format_sync_timeout = 1000
     autocmd! BufWritePre *.rs,*.go call execute('LspDocumentFormatSync')

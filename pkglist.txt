@@ -1,9 +1,13 @@
 amd-ucode
+ardour
 base
 base-devel
 bc
 blueman
 bluez-utils
+breeze
+breeze-gtk
+breeze5
 btop
 btrfs-progs
 catfish
@@ -13,7 +17,6 @@ cmake
 cmatrix-git
 cpio
 cuda
-davinci-resolve
 dkms
 dmidecode
 dnsmasq
@@ -28,6 +31,7 @@ flatpak
 font-manager
 gamemode
 gamescope
+gdb
 gimp
 git
 git-lfs
@@ -41,6 +45,7 @@ guestfs-tools
 gvfs
 gvfs-afc
 gvfs-mtp
+harvid
 htop
 hypridle
 hyprland
@@ -51,12 +56,15 @@ inkscape
 iptables-nft
 iwd
 jq
+kdeclarative
+kdenlive-appimage
 kitty
 lazygit
 lib2geom
 lib32-nvidia-utils
 libosinfo
 libpulse
+libreoffice-fresh
 libva-mesa-driver
 libvirt
 linux
@@ -65,6 +73,7 @@ linux-headers
 loupe
 lutris
 man-db
+mediainfo
 meson
 mlocate
 nano
@@ -78,8 +87,10 @@ noto-fonts-emoji
 noto-fonts-extra
 npm
 ntfs-3g
+nvidia-container-toolkit
 nvidia-dkms
 nwg-look
+opentimelineio
 otf-font-awesome
 pacseek
 papirus-icon-theme
@@ -90,6 +101,7 @@ pipewire-alsa
 pipewire-jack
 pipewire-pulse
 podman
+podman-compose
 polkit-gnome
 polkit-kde-agent
 poppler-glib
@@ -98,7 +110,9 @@ qemu-img
 qt5-graphicaleffects
 qt5-quickcontrols2
 qt5-wayland
+qt6-imageformats
 qt6-wayland
+recordmydesktop
 rhythmbox
 ripgrep
 rofi-emoji-git

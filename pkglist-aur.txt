@@ -1,7 +1,7 @@
 cmatrix-git
-davinci-resolve
 firefox-pwa
 hyprpicker
+kdenlive-appimage
 pacseek
 phinger-cursors
 rofi-emoji-git

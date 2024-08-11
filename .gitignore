@@ -20,6 +20,10 @@ config/evolution/*/**
 config/dconf/user
 config/inkscape/**
 config/WebCord/**
+config/libreoffice/**
+config/kdenlive/**
+config/kdenlive*
+config/ardour8/**
 
 # Prerequisites
 *.d
