@@ -6,8 +6,8 @@
 [[ $- != *i* ]] && return
 
 # ENV VARS
-
 export LIBVIRT_DEFAULT_URI='qemu:///system'
+export PATH=$HOME/.local/bin:$HOME/.local/pip/bin:$PATH
 
 # ALIASES
 alias ls='ls --color=auto'

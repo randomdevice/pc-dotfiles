@@ -24,6 +24,8 @@ config/libreoffice/**
 config/kdenlive/**
 config/kdenlive*
 config/ardour8/**
+config/kicad/**
+config/go/**
 
 # Prerequisites
 *.d

@@ -1,5 +1,7 @@
 amd-ucode
 ardour
+avr-gcc
+avr-libc
 base
 base-devel
 bc
@@ -15,6 +17,7 @@ clang
 cliphist
 cmake
 cmatrix-git
+cni-plugins
 cpio
 cuda
 dkms
@@ -23,6 +26,7 @@ dnsmasq
 dunst
 edk2-ovmf
 efibootmgr
+emacs
 exfatprogs
 file-roller
 firefox
@@ -52,12 +56,16 @@ hyprland
 hyprlock
 hyprpicker
 hyprwayland-scanner
+imagemagick
 inkscape
 iptables-nft
 iwd
 jq
+jupyter-notebook
+jupyter-server-mathjax
 kdeclarative
 kdenlive-appimage
+kicad
 kitty
 lazygit
 lib2geom
@@ -71,11 +79,12 @@ linux
 linux-firmware
 linux-headers
 loupe
+luarocks
 lutris
 man-db
 mediainfo
 meson
-mlocate
+minetest
 nano
 neofetch
 neovim
@@ -100,11 +109,14 @@ pipewire
 pipewire-alsa
 pipewire-jack
 pipewire-pulse
+plocate
 podman
 podman-compose
 polkit-gnome
 polkit-kde-agent
 poppler-glib
+python-pip
+python-pipx
 qemu-full
 qemu-img
 qt5-graphicaleffects
@@ -118,6 +130,7 @@ ripgrep
 rofi-emoji-git
 rofi-wayland
 sddm
+slirp4netns
 slurp
 smartmontools
 steam
@@ -181,5 +194,4 @@ xorg-server
 xorg-xhost
 xorg-xinit
 yay
-yay-debug
 zram-generator

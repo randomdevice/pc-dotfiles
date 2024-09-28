@@ -10,4 +10,3 @@ wlogout
 wlrobs
 wttrbar
 yay
-yay-debug
