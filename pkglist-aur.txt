@@ -1,6 +1,5 @@
 cmatrix-git
 firefox-pwa
-hyprpicker
 kdenlive-appimage
 pacseek
 phinger-cursors

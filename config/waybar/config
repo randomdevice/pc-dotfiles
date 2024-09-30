@@ -15,12 +15,12 @@
     //***************************
 
     "hyprland/workspaces": {
- 	"format": "{icon}",
+ 	    "format": "{icon}",
+        "on-click": "activate",
         "format-icons": {
 	       "active": "󰆦",
            "default": "󰆧",
 	    },     
-        "disable-scroll": true,
         "persistent-workspaces": {
             "1": [],
             "2": [],
