@@ -1,6 +1,6 @@
 Authenticator	com.belmoussaoui.Authenticator	4.4.0	stable	system
 Flatseal	com.github.tchx84.Flatseal	2.2.0	stable	system
-Heroic Games Launcher	com.heroicgameslauncher.hgl	v2.15.1	stable	system
+Heroic Games Launcher	com.heroicgameslauncher.hgl	v2.15.2	stable	system
 OBS Studio	com.obsproject.Studio	30.2.0	stable	system
 Spotify	com.spotify.Client	1.2.37.701.ge66eb7bc	stable	system
 Warehouse	io.github.flattool.Warehouse	1.6.4	stable	system

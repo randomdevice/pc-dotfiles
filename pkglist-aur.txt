@@ -1,5 +1,6 @@
 cmatrix-git
 firefox-pwa
+hyprland-qtutils
 kdenlive-appimage
 pacseek
 phinger-cursors

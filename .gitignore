@@ -26,6 +26,9 @@ config/kdenlive*
 config/ardour8/**
 config/kicad/**
 config/go/**
+config/Google/**
+config/unity3d/**
+config/godot/**
 
 # Prerequisites
 *.d

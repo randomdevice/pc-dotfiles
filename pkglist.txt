@@ -19,6 +19,7 @@ cmake
 cmatrix-git
 cni-plugins
 cpio
+cpupower
 cuda
 dkms
 dmidecode
@@ -41,6 +42,7 @@ git
 git-lfs
 glmark2
 gnome-keyring
+godot
 gpart
 gparted
 grim
@@ -53,6 +55,7 @@ harvid
 htop
 hypridle
 hyprland
+hyprland-qtutils
 hyprlock
 hyprpicker
 hyprwayland-scanner
@@ -73,18 +76,18 @@ lib32-nvidia-utils
 libosinfo
 libpulse
 libreoffice-fresh
-libva-mesa-driver
 libvirt
 linux
 linux-firmware
 linux-headers
 loupe
+luanti
 luarocks
 lutris
 man-db
 mediainfo
+mercurial
 meson
-minetest
 nano
 neofetch
 neovim
@@ -129,6 +132,7 @@ rhythmbox
 ripgrep
 rofi-emoji-git
 rofi-wayland
+rust
 sddm
 slirp4netns
 slurp

@@ -12,17 +12,17 @@ function send_notification {
     volume=`get_volume`
     volume_int=`echo "scale=0; (($volume * 100)+0.5)/1" | bc`
 
-    echo $volume_int
-    bar=$(seq -s "─" `echo "scale=0; $volume * 21" | bc` | sed 's/[0-9]//g')
+    # echo $volume_int
+    bar=$(seq -s '─' `echo "scale=0; $volume * 20" | bc` | sed 's/[0-9]//g')
     if is_mute; then
-        dunstify "$volume_int%""  ""$bar" -t 2000 -i "$HOME/.config/volume-notif/icons/mute-white.svg" -h string:x-dunst-stack-tag:volume-notify
+        dunstify "$volume_int%   ""$bar" -t 2000 -i "$HOME/.config/volume-notif/icons/mute-white.svg" -h string:x-dunst-stack-tag:volume-notify
     else
         if [[ $volume_int -eq 0 ]]; then
-          dunstify "$volume_int%""  ""$bar" -t 2000 -i "$HOME/.config/volume-notif/icons/mute-white.svg" -h string:x-dunst-stack-tag:volume-notify
-        elif [[ $volume < 0.5 ]]; then
-          dunstify "$volume_int%""  ""$bar" -t 2000 -i "$HOME/.config/volume-notif/icons/min-white.svg" -h string:x-dunst-stack-tag:volume-notify
+          dunstify "$volume_int%   ""$bar" -t 2000 -i "$HOME/.config/volume-notif/icons/mute-white.svg" -h string:x-dunst-stack-tag:volume-notify
+        elif [[ $volume_int < 50 ]]; then
+          dunstify "$volume_int%   ""$bar" -t 2000 -i "$HOME/.config/volume-notif/icons/min-white.svg" -h string:x-dunst-stack-tag:volume-notify
       else
-          dunstify "$volume_int%""  ""$bar" -t 2000 -i "$HOME/.config/volume-notif/icons/max-white.svg" -h string:x-dunst-stack-tag:volume-notify
+          dunstify "$volume_int%   ""$bar" -t 2000 -i "$HOME/.config/volume-notif/icons/max-white.svg" -h string:x-dunst-stack-tag:volume-notify
         fi
     fi
 }

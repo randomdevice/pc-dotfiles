@@ -24,11 +24,22 @@ return {
         end
     },
 
-    -- LSP Config
+    -- Mason LSP Manager
     {
         "williamboman/mason.nvim",
         "williamboman/mason-lspconfig.nvim",
+    },
+
+    -- LSP Config
+    {
         "neovim/nvim-lspconfig",
+        init_options = {
+            userLanguages = {
+                eelixir = "html-eex",
+                eruby = "erb",
+                rust = "html",
+            },
+        },
     },
 
     -- Autocomplete and snippets
@@ -38,15 +49,8 @@ return {
         "hrsh7th/cmp-path",
         "hrsh7th/cmp-cmdline",
         "hrsh7th/nvim-cmp",
+        "rafamadriz/friendly-snippets",
         "L3MON4D3/LuaSnip",
         "saadparwaiz1/cmp_luasnip"
-    },
-
-    -- neovim images
-    {
-        "3rd/image.nvim",
-        config = function()
-            -- ...
-        end
-    },
+    }
 }
