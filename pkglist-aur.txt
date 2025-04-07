@@ -1,6 +1,5 @@
+apio
 cmatrix-git
-firefox-pwa
-hyprland-qtutils
 kdenlive-appimage
 pacseek
 phinger-cursors
@@ -10,3 +9,4 @@ wlogout
 wlrobs
 wttrbar
 yay
+zoom

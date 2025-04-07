@@ -1,12 +1,11 @@
 Authenticator	com.belmoussaoui.Authenticator	4.4.0	stable	system
 Flatseal	com.github.tchx84.Flatseal	2.2.0	stable	system
-Heroic Games Launcher	com.heroicgameslauncher.hgl	v2.15.2	stable	system
+Heroic Games Launcher	com.heroicgameslauncher.hgl	v2.16.1	stable	system
 OBS Studio	com.obsproject.Studio	30.2.0	stable	system
 Spotify	com.spotify.Client	1.2.37.701.ge66eb7bc	stable	system
 Warehouse	io.github.flattool.Warehouse	1.6.4	stable	system
 Podman Desktop	io.podman_desktop.PodmanDesktop	1.11.1	stable	system
 Obsidian	md.obsidian.Obsidian	1.6.5	stable	system
-Gaphor	org.gaphor.Gaphor	2.26.0	stable	system
 Calculator	org.gnome.Calculator	46.1	stable	system
 Papers	org.gnome.Papers	46.2	stable	system
 Clocks	org.gnome.clocks	46.0	stable	system

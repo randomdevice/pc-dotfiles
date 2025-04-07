@@ -7,7 +7,7 @@
 
 # ENV VARS
 export LIBVIRT_DEFAULT_URI='qemu:///system'
-export PATH=$HOME/.local/bin:$HOME/.local/pip/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
 export ANDROID_HOME=$HOME/Android/Sdk
 
 # ALIASES

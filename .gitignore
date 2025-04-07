@@ -29,6 +29,15 @@ config/go/**
 config/Google/**
 config/unity3d/**
 config/godot/**
+config/chromium/**
+config/eww/**
+config/zoom.conf
+config/zoomus.conf
+config/monero-project/**
+config/WarThunder/**
+config/Gaijin/**
+config/QtProject.conf
+
 
 # Prerequisites
 *.d

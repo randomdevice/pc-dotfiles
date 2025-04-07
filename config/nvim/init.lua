@@ -14,6 +14,7 @@ vim.opt.relativenumber = true          -- relative line numbers
 vim.opt.wildmode = "longest,list"      -- get bash tab-completions 
 vim.opt.cursorline = true              -- highlight current cursor line
 vim.opt.clipboard = "unnamedplus"      -- use system clipboard
+vim.opt.foldmethod = "syntax"          -- defines folds based on lang syntax
 
 vim.cmd([[
   set complete+=kspell
