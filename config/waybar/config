@@ -52,7 +52,7 @@
 
     "custom/llm": {
         "format": "󱜙",
-        "on-click": "firefoxpwa site launch 01JPBRPX7F1VNR59WFRTJ3PEEV",
+        "on-click": "firefoxpwa site launch 01JYSETC9ESHMPVX9MMF8QJCBF",
         "tooltip": false,
     },
 

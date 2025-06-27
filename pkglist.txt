@@ -97,7 +97,6 @@ nvidia-settings
 nwg-look
 opentimelineio
 otf-font-awesome
-p2pool
 pacseek
 papirus-icon-theme
 pavucontrol
@@ -127,9 +126,11 @@ rhythmbox
 rofi-emoji-git
 rofi-wayland
 sddm
+slack-desktop-wayland
 slirp4netns
 slurp
 smartmontools
+speech-dispatcher
 swtpm
 swww
 thunar

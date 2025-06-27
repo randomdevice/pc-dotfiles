@@ -2,6 +2,20 @@
 
 #podman run -d --rm --device nvidia.com/gpu=all -v ollama:/root/.ollama -p 127.0.0.1:11434:11434 --name ollama docker.io/ollama/ollama
 
+podman run -d --rm \
+	-p 127.0.0.1:3000:8080 \
+	--network=pasta:-T,11434,-T,9060,-T,9030,-T,6333,-T,6334 \
+	--add-host=ollama.local:127.0.0.1 \
+	--add-host=qdrant.local:127.0.0.1 \
+    --add-host=comfy.local:127.0.0.1 \
+    --env VECTOR_DB=qdrant \
+	--env QDRANT_URI=127.0.0.1:6333 \
+	--env OLLAMA_BASE_URL=http://ollama.local:11434 \
+	--env ANONYMIZED_TELEMETRY=False \
+	-v open-webui:/app/backend/data \
+	--label io.containers.autoupdate=registry \
+	--name openweb-ui ghcr.io/open-webui/open-webui:v0.6.10
+
 #podman run -d --rm \
 #--name n8n-postgres \
 #-p 5432:5432 \
@@ -44,3 +58,4 @@
 # podman generate systemd --new --files --name n8n
 # podman generate systemd --new --files --name kokoro-speech
 # podman generate systemd --new --files --name ollama
+podman generate systemd --new --files --name openweb-ui
