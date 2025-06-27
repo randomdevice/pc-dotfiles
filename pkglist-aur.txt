@@ -1,3 +1,5 @@
+localsend-bin
+mochi-appimage
 pacseek
 rofi-emoji-git
 slack-desktop-wayland

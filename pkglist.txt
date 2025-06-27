@@ -75,12 +75,14 @@ libvirt
 linux
 linux-firmware
 linux-headers
+localsend-bin
 loupe
 luanti
 luarocks
 man-db
 mangohud
 mediainfo
+mochi-appimage
 nano
 neovim
 network-manager-applet
@@ -131,6 +133,7 @@ slirp4netns
 slurp
 smartmontools
 speech-dispatcher
+steam
 swtpm
 swww
 thunar

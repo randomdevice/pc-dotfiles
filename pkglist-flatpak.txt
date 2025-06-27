@@ -1,7 +1,7 @@
 Flatseal	com.github.tchx84.Flatseal	2.3.1	stable	system
+Heroic	com.heroicgameslauncher.hgl	v2.17.2	stable	system
 OBS Studio	com.obsproject.Studio	31.0.3	stable	system
 Warehouse	io.github.flattool.Warehouse	2.1.0	stable	system
-Obsidian	md.obsidian.Obsidian	1.8.10	stable	system
 Calculator	org.gnome.Calculator	48.1	stable	system
 Papers	org.gnome.Papers	48.4	stable	system
 Clocks	org.gnome.clocks	48.0	stable	system
