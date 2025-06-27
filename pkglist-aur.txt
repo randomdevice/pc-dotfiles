@@ -1,0 +1,6 @@
+pacseek
+rofi-emoji-git
+wlogout
+wttrbar
+yay
+yay-debug
