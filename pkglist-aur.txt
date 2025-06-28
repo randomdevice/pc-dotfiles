@@ -3,6 +3,7 @@ mochi-appimage
 pacseek
 rofi-emoji-git
 slack-desktop-wayland
+sunshine
 wlogout
 wttrbar
 yay

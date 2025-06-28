@@ -14,7 +14,7 @@ vim.opt.relativenumber = true          -- relative line numbers
 vim.opt.wildmode = "longest,list"      -- get bash tab-completions 
 vim.opt.cursorline = true              -- highlight current cursor line
 vim.opt.clipboard = "unnamedplus"      -- use system clipboard
-vim.opt.foldmethod = "syntax"          -- defines folds based on lang syntax
+vim.opt.foldmethod = "indent"          -- defines folds based on lang syntax
 
 vim.cmd([[
   set complete+=kspell
@@ -35,7 +35,8 @@ require("config.init")
 
 -- KEYBINDS
 vim.keymap.set("n", "<leader>ft", vim.cmd.Ex, { desc = "Opens file tree" })
-vim.keymap.set("n", "<leader>p", vim.cmd.Lazy, { desc = "Opens Lazy vim" })
+vim.keymap.set("n", "<leader>p", vim.cmd.Lazy, { desc = "Opens Lazy.vim package manager" })
+vim.keymap.set("n", "<leader>m", vim.cmd.Mason, { desc = "Opens Mason LSP manager" })
 vim.keymap.set("n", "<leader>?", require('fzf-lua').keymaps, { desc = "Show keybindings" })
 vim.keymap.set("n", "<leader>ff", require('fzf-lua').files, { desc = "Show Files" })
 vim.keymap.set("n", "<leader>fw", require('fzf-lua').grep_project, { desc = "Grep folder" })
@@ -45,5 +46,21 @@ vim.keymap.set("n", "<leader>c", require('fzf-lua').changes, { desc = "List File
 vim.keymap.set("n", "<leader>h", require('fzf-lua').oldfiles, { desc = "Show File History" })
 vim.keymap.set("n", "<leader>b", require('fzf-lua').buffers, { desc = "Show Open Vim Buffers" })
 vim.keymap.set("n", "<c-d>", "<c-d>zz", { desc = "Scroll down and center" })
-vim.keymap.set("n", "<c-e>", "<c-d>zz", { desc = "Scroll up and center" })
+vim.keymap.set("n", "<c-u>", "<c-u>zz", { desc = "Scroll up and center" })
+
+
+-- LSP Keybinds
+vim.keymap.set('n', 'gh', vim.lsp.buf.hover, { desc = "LSP hover" })
+vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, { desc = "LSP declaration" })
+vim.keymap.set('n', 'gd', vim.lsp.buf.definition, { desc = "LSP definition" })
+vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, { desc = "LSP implementation" })
+vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, { desc = "LSP signature" })
+vim.keymap.set('n', '<leader>lt', vim.lsp.buf.type_definition, { desc = "LSP type definition" })
+vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, { desc = "LSP rename" })
+vim.keymap.set('n', 'lr', vim.lsp.buf.references, { desc = "LSP references" })
+vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = "LSP errors" })
+vim.keymap.set('n', '<leader>qa', ':CodeCompanionActions<CR>', { desc = 'Open CodeCompanion Action Palette' })
+vim.keymap.set('n', '<leader>qq', ':CodeCompanionChat Toggle<CR>', { desc = 'Toggle CodeCompanion Chat Buffer' })
+vim.keymap.set('n', '<leader>qw', ':CodeCompanion<CR>', { desc = 'Open CodeCompanion Inline Chat' })
+
 

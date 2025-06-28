@@ -18,6 +18,7 @@ clang
 cliphist
 cmake
 cpupower
+cuda
 dkms
 dnsmasq
 dunst
@@ -97,6 +98,7 @@ nvidia-container-toolkit
 nvidia-dkms
 nvidia-settings
 nwg-look
+obsidian
 opentimelineio
 otf-font-awesome
 pacseek
@@ -134,6 +136,7 @@ slurp
 smartmontools
 speech-dispatcher
 steam
+sunshine
 swtpm
 swww
 thunar
