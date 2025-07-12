@@ -39,6 +39,7 @@ git
 git-lfs
 glfw
 glmark2
+globalprotect-openconnect
 gnome-keyring
 godot
 gpart

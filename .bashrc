@@ -7,8 +7,8 @@
 
 # ENV VARS
 export LIBVIRT_DEFAULT_URI='qemu:///system'
-export PATH=$HOME/.local/bin:/opt/cuda/bin:$PATH
-export LD_LIBRARY_PATH=/opt/cuda/lib64:$LD_LIBRARY_PATH
+export PATH=$HOME/.local/bin:$HOME/.local/DataGrip/bin:/opt/cuda/bin:$PATH
+export LD_LIBRARY_PATH=/opt/cuda/lib64:$HOME/.local/DataGrip/lib:$LD_LIBRARY_PATH
 export ANDROID_HOME=$HOME/Android/Sdk
 
 # ALIASES
