@@ -19,6 +19,7 @@ cliphist
 cmake
 cpupower
 cuda
+discord
 dkms
 dnsmasq
 dunst
