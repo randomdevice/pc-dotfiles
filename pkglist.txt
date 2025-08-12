@@ -66,6 +66,7 @@ jq
 jupyter-notebook
 jupyter-server-mathjax
 kdeclarative
+kdenlive
 kicad
 kitty
 lazygit
@@ -86,6 +87,7 @@ man-db
 mangohud
 mediainfo
 mochi-appimage
+mongodb-compass-bin
 nano
 neovim
 network-manager-applet
