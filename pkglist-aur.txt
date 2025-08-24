@@ -1,6 +1,5 @@
 localsend-bin
 mochi-appimage
-mongodb-compass-bin
 pacseek
 rofi-emoji-git
 slack-desktop-wayland

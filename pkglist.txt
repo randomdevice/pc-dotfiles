@@ -87,7 +87,6 @@ man-db
 mangohud
 mediainfo
 mochi-appimage
-mongodb-compass-bin
 nano
 neovim
 network-manager-applet
