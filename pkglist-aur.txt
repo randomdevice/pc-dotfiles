@@ -2,9 +2,8 @@ localsend-bin
 mochi-appimage
 pacseek
 rofi-emoji-git
+rofi-wayland
 slack-desktop-wayland
-sunshine
 wlogout
 wttrbar
 yay
-yay-debug

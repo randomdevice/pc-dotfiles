@@ -100,6 +100,7 @@ ntfs-3g
 nvidia-container-toolkit
 nvidia-dkms
 nvidia-settings
+nwg-displays
 nwg-look
 obsidian
 opentimelineio
@@ -139,7 +140,6 @@ slurp
 smartmontools
 speech-dispatcher
 steam
-sunshine
 swtpm
 swww
 thunar
@@ -176,5 +176,4 @@ xorg-server
 xorg-xhost
 xorg-xinit
 yay
-yay-debug
 zram-generator
