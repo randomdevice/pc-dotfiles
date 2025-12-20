@@ -1,0 +1,4 @@
+gamemode
+gamescope
+mangohud
+steam

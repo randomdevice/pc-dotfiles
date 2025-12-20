@@ -1,0 +1,4 @@
+nvidia-container-toolkit
+podman
+podman-compose
+slirp4netns

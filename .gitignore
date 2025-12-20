@@ -44,6 +44,8 @@
 !pkglist.txt
 !usr/
 !usr/**
+!lists/
+!lists/**
 !config/
 !config/electron-flags.conf
 !aiops/
