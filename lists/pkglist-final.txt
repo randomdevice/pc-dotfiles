@@ -1,8 +1,12 @@
 ardour
+avr-gcc
+avr-libc
 chromium
 discord
 gimp
 globalprotect-openconnect
+harvid
+imagemagick
 inkscape
 kdenlive
 kicad
@@ -14,5 +18,8 @@ mochi-appimage
 obsidian
 opentimelineio
 poppler-glib
+rofi-emoji-git
+rofi-wayland
 slack-desktop-wayland
 torbrowser-launcher
+wireless_tools

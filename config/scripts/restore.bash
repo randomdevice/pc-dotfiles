@@ -21,8 +21,29 @@ function yes_or_no {
 
 function confirm_dotfile {
     echo "Assuming DOTFILE_REPO is: $DOTFILE_REPO"
+    echo "Please correct in script if needed."
     yes_or_no "Continue?" || return 1
     echo "Running from $DOTFILE_REPO"
+}
+
+function update_backup {
+    echo "Installing backup script"
+    yes_or_no "Continue?" || return 1
+    pushd $DOTFILE_REPO
+        git lfs install
+        git lfs pull 
+    popd
+    cp -v "$DOTFILE_REPO/config/scripts/backup.bash" "$HOME/.config/scripts/backup.bash"
+}
+
+function update_restore {
+    echo "Installing restore script"
+    yes_or_no "Continue?" || return 1
+    pushd $DOTFILE_REPO
+        git lfs install
+        git lfs pull 
+    popd
+    cp -v "$DOTFILE_REPO/config/scripts/restore.bash" "$HOME/.config/scripts/restore.bash"
 }
 
 function install_yay {
@@ -50,6 +71,7 @@ function setup_udisks {
 function setup_basics {
     echo "Installing basic packages for setup (pkglist-base.txt):"
     cat "$DOTFILE_REPO/lists/pkglist-base.txt"
+    grep -vxFf "$DOTFILE_REPO/lists/pkglist-base.txt" "$DOTFILE_REPO/pkglist.txt" > "$DOTFILE_REPO/lists/pkglist-final.txt"
     yes_or_no "Continue?" || return 1
     sudo pacman -S --needed $(comm -12 <(pacman -Slq | sort) <(sort "$DOTFILE_REPO/lists/pkglist-base.txt"))
     yay -S --needed localsend-bin
@@ -58,9 +80,6 @@ function setup_basics {
     yay -S --needed pacseek 
     yay -S --needed wlogout
     yay -S --needed wttrbar
-    # Extra AUR packages
-    yay -S --needed - < "$DOTFILE_REPO/pkglist-aur.txt"
-
 }
 
 function setup_configs {
@@ -78,51 +97,67 @@ function setup_configs {
 function setup_containers {
     echo "Installing packages for containers (pkglist-containers.txt):"
     cat "$DOTFILE_REPO/lists/pkglist-containers.txt"
+    grep -vxFf "$DOTFILE_REPO/lists/pkglist-containers.txt" "$DOTFILE_REPO/lists/pkglist-final.txt" > "$DOTFILE_REPO/lists/pkglist-final-tmp.txt"
+    mv "$DOTFILE_REPO/lists/pkglist-final-tmp.txt" "$DOTFILE_REPO/lists/pkglist-final.txt"
     yes_or_no "Continue?" || return 1
-    sudo pacman -S --needed $(comm -12 <(pacman -Slq | sort) <(sort "$DOTFILE_REPO/lists/pkglist-containers.txt"))
+    sudo yay -S --needed $(comm -12 <(pacman -Slq | sort) <(sort "$DOTFILE_REPO/lists/pkglist-containers.txt"))
 }
 
 function setup_dev {
     echo "Installing packages for dev libs (pkglist-dev.txt):"
     cat "$DOTFILE_REPO/lists/pkglist-dev.txt"
+    grep -vxFf "$DOTFILE_REPO/lists/pkglist-dev.txt" "$DOTFILE_REPO/lists/pkglist-final.txt" > "$DOTFILE_REPO/lists/pkglist-final-tmp.txt"
+    mv "$DOTFILE_REPO/lists/pkglist-final-tmp.txt" "$DOTFILE_REPO/lists/pkglist-final.txt"
     yes_or_no "Continue?" || return 1
-    sudo pacman -S --needed $(comm -12 <(pacman -Slq | sort) <(sort "$DOTFILE_REPO/lists/pkglist-dev.txt"))
+    sudo yay -S --needed $(comm -12 <(pacman -Slq | sort) <(sort "$DOTFILE_REPO/lists/pkglist-dev.txt"))
 }
 
 function setup_gaming {
     echo "Installing packages for dev libs (pkglist-gaming.txt):"
     cat "$DOTFILE_REPO/lists/pkglist-gaming.txt"
+    grep -vxFf "$DOTFILE_REPO/lists/pkglist-gaming.txt" "$DOTFILE_REPO/lists/pkglist-final.txt" > "$DOTFILE_REPO/lists/pkglist-final-tmp.txt"
+    mv "$DOTFILE_REPO/lists/pkglist-final-tmp.txt" "$DOTFILE_REPO/lists/pkglist-final.txt"
     yes_or_no "Continue?" || return 1
-    sudo pacman -S --needed $(comm -12 <(pacman -Slq | sort) <(sort "$DOTFILE_REPO/lists/pkglist-gaming.txt"))
-}
-
-function setup_usr {
-    echo "Installing user packages (pkglist-usr.txt):"
-    cat "$DOTFILE_REPO/lists/pkglist-usr.txt"
-    yes_or_no "Continue?" || return 1
-    sudo pacman -S --needed $(comm -12 <(pacman -Slq | sort) <(sort "$DOTFILE_REPO/lists/pkglist-usr.txt"))
+    sudo yay -S --needed $(comm -12 <(pacman -Slq | sort) <(sort "$DOTFILE_REPO/lists/pkglist-gaming.txt"))
 }
 
 function setup_virt {
     echo "Installing packages for dev libs (pkglist-virt.txt):"
     cat "$DOTFILE_REPO/lists/pkglist-virt.txt"
+    grep -vxFf "$DOTFILE_REPO/lists/pkglist-virt.txt" "$DOTFILE_REPO/lists/pkglist-final.txt" > "$DOTFILE_REPO/lists/pkglist-final-tmp.txt"
+    mv "$DOTFILE_REPO/lists/pkglist-final-tmp.txt" "$DOTFILE_REPO/lists/pkglist-final.txt"
     yes_or_no "Continue?" || return 1
-    sudo pacman -S --needed $(comm -12 <(pacman -Slq | sort) <(sort "$DOTFILE_REPO/lists/pkglist-virt.txt"))
+    sudo yay -S --needed $(comm -12 <(pacman -Slq | sort) <(sort "$DOTFILE_REPO/lists/pkglist-virt.txt"))
+}
+
+function setup_usr {
+    echo "Installing user packages (pkglist-final.txt):"
+    cat "$DOTFILE_REPO/lists/pkglist-final.txt"
+    yes_or_no "Continue?" || return 1
+    sudo yay -S --needed $(comm -12 <(pacman -Slq | sort) <(sort "$DOTFILE_REPO/lists/pkglist-final.txt"))
+    # Extra AUR packages
+    yay -S --needed - < "$DOTFILE_REPO/pkglist-aur.txt"
+}
+
+function setup_rust {
+    echo "Installing Rust"
+    yes_or_no "Continue?" || return 1
+    # Install Rust
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 }
 
 install_yay
 confirm_dotfile
+update_backup
+update_restore
 setup_udisks
 setup_basics
 setup_configs
 setup_containers
 setup_dev
 setup_gaming
-setup_usr
 setup_virt
-
-# Install Rust
-echo "Installing Rust"
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+setup_usr
+setup_rust
 
 echo "Setup completed successfully!"
