@@ -61,6 +61,7 @@ hyprpolkitagent
 imagemagick
 inkscape
 iptables-nft
+irqbalance
 iwd
 jq
 jupyter-notebook

@@ -1,5 +1,6 @@
 localsend-bin
 mochi-appimage
+nvidia-dkms
 pacseek
 rofi-emoji-git
 rofi-wayland

@@ -26,4 +26,3 @@ vulkan-extra-tools
 vulkan-html-docs
 vulkan-tools
 vulkan-utility-libraries
-

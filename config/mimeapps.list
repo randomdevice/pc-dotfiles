@@ -1,0 +1,11 @@
+[Default Applications]
+application/pdf=org.gnome.Papers.desktop
+x-scheme-handler/mochi=mochi.desktop
+application/x-zerosize=org.gnome.gitlab.somas.Apostrophe.desktop
+
+[Added Associations]
+application/pdf=org.gnome.Papers.desktop;firefox.desktop;
+image/webp=gimp.desktop;
+image/jpeg=org.gnome.Loupe.desktop;
+image/bmp=org.gnome.Loupe.desktop;
+application/x-zerosize=org.gnome.gitlab.somas.Apostrophe.desktop;

@@ -51,21 +51,28 @@
 !aiops/
 !aiops/**
 
-!config/kitty/
+# Core Hypr Configs
 !config/hypr/
-!config/nvim/
-!config/cliphist/
-!config/dunst/
-!config/rofi/
-!config/scripts/
-!config/swww/
-!config/rofi/
-!config/tmux/
 !config/waybar/
-!config/xsettingsd
+!config/rofi/
+!config/dunst/
 !config/wlogout/
-!config/volume-notif/
+!config/swww/
+!config/cliphist/
+!config/nwg-displays/
 !config/nwg-look/
+!config/xsettingsd
+!config/volume-notif/
+!config/gtk-3.0/
+!config/gtk-4.0/
+!config/qt5ct/
+!config/fontconfig/
+!config/mimeapps.list
+
+!config/kitty/
+!config/nvim/
+!config/scripts/
+!config/tmux/
 
 !config/kitty/**
 !config/hypr/**
