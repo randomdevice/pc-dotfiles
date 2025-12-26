@@ -8,6 +8,7 @@ globalprotect-openconnect
 harvid
 imagemagick
 inkscape
+irqbalance
 kdenlive
 kicad
 kitty

@@ -4,6 +4,11 @@ DOTFILE_REPO=$LOCAL_DIR
 # Exit immediately on intermediate command abort
 # set -e
 
+# Stylish header
+function header {
+    echo -e "\n\e[1;34m>> $1\e[0m"
+}
+
 function yes_or_no {
     while true; do
         read -p "$* [y/n]: " yn
@@ -22,12 +27,12 @@ function yes_or_no {
 function confirm_dotfile {
     echo "Assuming DOTFILE_REPO is: $DOTFILE_REPO"
     echo "Please correct in script if needed."
-    yes_or_no "Continue?" || return 1
+    yes_or_no "Continue?" || exit 1
     echo "Running from $DOTFILE_REPO"
 }
 
 function update_backup {
-    echo "Installing backup script"
+    header "Installing backup script"
     yes_or_no "Continue?" || return 1
     pushd $DOTFILE_REPO
         git lfs install
@@ -37,7 +42,7 @@ function update_backup {
 }
 
 function update_restore {
-    echo "Installing restore script"
+    header "Installing restore script"
     yes_or_no "Continue?" || return 1
     pushd $DOTFILE_REPO
         git lfs install
@@ -47,7 +52,7 @@ function update_restore {
 }
 
 function install_yay {
-    echo "Installing yay for AUR packages:"
+    header "Installing yay for AUR packages:"
     yes_or_no "Continue?" || return 1
     echo "Installing..."
     pushd "$HOME/repo_local"
@@ -59,7 +64,7 @@ function install_yay {
 }
 
 function setup_udisks {
-    echo "Setup directories for disk mounts."
+    header "Setup directories for disk mounts."
     yes_or_no "Continue?" || return 1
     sudo mkdir -p "/run/media/$USER/primarystorage"
     sudo mkdir -p "/run/media/$USER/backup"
@@ -69,7 +74,7 @@ function setup_udisks {
 }
 
 function setup_basics {
-    echo "Installing basic packages for setup (pkglist-base.txt):"
+    header "Installing basic packages for setup (pkglist-base.txt):"
     cat "$DOTFILE_REPO/lists/pkglist-base.txt"
     grep -vxFf "$DOTFILE_REPO/lists/pkglist-base.txt" "$DOTFILE_REPO/pkglist.txt" > "$DOTFILE_REPO/lists/pkglist-final.txt"
     yes_or_no "Continue?" || return 1
@@ -83,7 +88,7 @@ function setup_basics {
 }
 
 function setup_configs {
-    echo "Installing local configs, bashrc, and theme:"
+    header "Installing local configs, bashrc, and theme:"
     yes_or_no "Continue?" || return 1
     pushd $DOTFILE_REPO
         git lfs install
@@ -95,7 +100,7 @@ function setup_configs {
 }
 
 function setup_containers {
-    echo "Installing packages for containers (pkglist-containers.txt):"
+    header "Installing packages for containers (pkglist-containers.txt):"
     cat "$DOTFILE_REPO/lists/pkglist-containers.txt"
     grep -vxFf "$DOTFILE_REPO/lists/pkglist-containers.txt" "$DOTFILE_REPO/lists/pkglist-final.txt" > "$DOTFILE_REPO/lists/pkglist-final-tmp.txt"
     mv "$DOTFILE_REPO/lists/pkglist-final-tmp.txt" "$DOTFILE_REPO/lists/pkglist-final.txt"
@@ -104,7 +109,7 @@ function setup_containers {
 }
 
 function setup_dev {
-    echo "Installing packages for dev libs (pkglist-dev.txt):"
+    header "Installing packages for dev libs (pkglist-dev.txt):"
     cat "$DOTFILE_REPO/lists/pkglist-dev.txt"
     grep -vxFf "$DOTFILE_REPO/lists/pkglist-dev.txt" "$DOTFILE_REPO/lists/pkglist-final.txt" > "$DOTFILE_REPO/lists/pkglist-final-tmp.txt"
     mv "$DOTFILE_REPO/lists/pkglist-final-tmp.txt" "$DOTFILE_REPO/lists/pkglist-final.txt"
@@ -113,7 +118,7 @@ function setup_dev {
 }
 
 function setup_gaming {
-    echo "Installing packages for dev libs (pkglist-gaming.txt):"
+    header "Installing packages for dev libs (pkglist-gaming.txt):"
     cat "$DOTFILE_REPO/lists/pkglist-gaming.txt"
     grep -vxFf "$DOTFILE_REPO/lists/pkglist-gaming.txt" "$DOTFILE_REPO/lists/pkglist-final.txt" > "$DOTFILE_REPO/lists/pkglist-final-tmp.txt"
     mv "$DOTFILE_REPO/lists/pkglist-final-tmp.txt" "$DOTFILE_REPO/lists/pkglist-final.txt"
@@ -122,7 +127,7 @@ function setup_gaming {
 }
 
 function setup_virt {
-    echo "Installing packages for dev libs (pkglist-virt.txt):"
+    header "Installing packages for dev libs (pkglist-virt.txt):"
     cat "$DOTFILE_REPO/lists/pkglist-virt.txt"
     grep -vxFf "$DOTFILE_REPO/lists/pkglist-virt.txt" "$DOTFILE_REPO/lists/pkglist-final.txt" > "$DOTFILE_REPO/lists/pkglist-final-tmp.txt"
     mv "$DOTFILE_REPO/lists/pkglist-final-tmp.txt" "$DOTFILE_REPO/lists/pkglist-final.txt"
@@ -131,7 +136,7 @@ function setup_virt {
 }
 
 function setup_usr {
-    echo "Installing user packages (pkglist-final.txt):"
+    header "Installing user packages (pkglist-final.txt):"
     cat "$DOTFILE_REPO/lists/pkglist-final.txt"
     yes_or_no "Continue?" || return 1
     sudo yay -S --needed $(comm -12 <(pacman -Slq | sort) <(sort "$DOTFILE_REPO/lists/pkglist-final.txt"))
@@ -140,7 +145,7 @@ function setup_usr {
 }
 
 function setup_rust {
-    echo "Installing Rust"
+    header "Installing Rust"
     yes_or_no "Continue?" || return 1
     # Install Rust
     curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
