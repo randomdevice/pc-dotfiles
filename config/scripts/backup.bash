@@ -6,8 +6,8 @@ DATE=$(date +'%Y-%m-%d %H:%M')
 
 # Core UI and System configs identified for your Hyprland/Virt setup
 CONFIGS_TO_BACKUP=(
-    "hypr" "waybar" "rofi" "dunst" "wlogout" "swww" 
-    "cliphist" "nwg-displays" "nwg-look" "kitty" 
+    "hypr" "waybar" "rofi" "dunst" "electron-flags.conf" "scripts" "volume-notif" "wlogout" "swww" 
+    "cliphist" "nvim" "nwg-displays" "nwg-look" "kitty" "gtk-2.0"
     "gtk-3.0" "gtk-4.0" "fontconfig" "mimeapps.list"
     "xsettingsd"
 )
