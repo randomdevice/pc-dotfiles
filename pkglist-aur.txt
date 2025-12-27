@@ -1,9 +1,7 @@
 localsend-bin
 mochi-appimage
-nvidia-dkms
 pacseek
 rofi-emoji-git
-rofi-wayland
 slack-desktop-wayland
 wlogout
 wttrbar

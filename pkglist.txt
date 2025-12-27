@@ -99,7 +99,7 @@ noto-fonts-extra
 npm
 ntfs-3g
 nvidia-container-toolkit
-nvidia-dkms
+nvidia-open-dkms
 nvidia-settings
 nwg-displays
 nwg-look
@@ -131,9 +131,11 @@ qt5-quickcontrols2
 qt5-wayland
 qt6-imageformats
 qt6-wayland
+rebuild-detector
+reflector
 rhythmbox
+rofi
 rofi-emoji-git
-rofi-wayland
 sddm
 slack-desktop-wayland
 slirp4netns
