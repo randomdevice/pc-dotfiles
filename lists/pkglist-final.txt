@@ -1,6 +1,7 @@
 ardour
 avr-gcc
 avr-libc
+brightnessctl
 chromium
 discord
 gimp

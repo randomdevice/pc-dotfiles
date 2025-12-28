@@ -10,6 +10,7 @@ bluez-utils
 breeze
 breeze-gtk
 breeze5
+brightnessctl
 btop
 btrfs-progs
 catfish
