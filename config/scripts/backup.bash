@@ -27,7 +27,6 @@ function git_push {
     pushd "$DOTFILE_REPO" > /dev/null
     header "Git Status Summary"
     git status --short
-    
     echo ""
     yes_or_no "Confirm: Commit and push these changes?" && \
     git add -A . && \
@@ -40,6 +39,15 @@ function header {
     echo -e "\n\e[1;34m>> $1\e[0m"
 }
 
+# Generates a list of other packages on the system that were not curated
+function generate_final_pkglist {
+    grep -vxFf "$DOTFILE_REPO/lists/pkglist-base.txt" "$DOTFILE_REPO/pkglist.txt" | \
+    grep -vxFf "$DOTFILE_REPO/lists/pkglist-containers.txt" | \
+    grep -vxFf "$DOTFILE_REPO/lists/pkglist-dev.txt" | \
+    grep -vxFf "$DOTFILE_REPO/lists/pkglist-gaming.txt" | \
+    grep -vxFf "$DOTFILE_REPO/lists/pkglist-virt.txt" > "$DOTFILE_REPO/lists/pkglist-final.txt"
+}
+
 # --- Execution ---
 
 header "Creating directory structure"
@@ -50,6 +58,7 @@ header "Backing up Package Lists"
 pacman -Qqe > "$DOTFILE_REPO/pkglist.txt"
 pacman -Qqem > "$DOTFILE_REPO/pkglist-aur.txt"
 flatpak list --app --columns=application > "$DOTFILE_REPO/pkglist-flatpak.txt"
+generate_final_pkglist
 echo "Lists updated."
 
 header "Syncing Selected .config Folders"
