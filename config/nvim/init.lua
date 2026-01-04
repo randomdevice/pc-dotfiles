@@ -1006,6 +1006,37 @@ require('lazy').setup({
     },
     lazy = true,
   },
+  {
+    'akinsho/flutter-tools.nvim',
+    lazy = false,
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      'stevearc/dressing.nvim', -- Better UI for device selection
+    },
+    config = function()
+      require('flutter-tools').setup {
+        -- Internal emulator settings
+        -- emulator = {
+        --   command = 'QT_QPA_PLATFORM=xcb /opt/android-sdk/emulator/emulator',
+        --   extra_args = {
+        --     '-avd',
+        --     'Flutter_Android36',
+        --     '-gpu',
+        --     'host',
+        --     '-no-snapshot-load',
+        --   },
+        -- },
+        lsp = {
+          color_render = true,
+          -- This plugin handles dartls. Do NOT config dartls in lspconfig.
+          settings = {
+            showTodos = true,
+            completeFunctionCalls = true,
+          },
+        },
+      }
+    end,
+  },
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the

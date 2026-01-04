@@ -1,4 +1,8 @@
 amd-ucode
+android-emulator
+android-sdk
+android-sdk-cmdline-tools-latest
+android-sdk-platform-tools
 ardour
 avr-gcc
 avr-libc
@@ -88,11 +92,13 @@ luarocks
 man-db
 mangohud
 mediainfo
+mesa-utils
 mochi-appimage
 nano
 neovim
 network-manager-applet
 networkmanager
+ninja
 noto-fonts
 noto-fonts-cjk
 noto-fonts-emoji

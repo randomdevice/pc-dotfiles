@@ -16,3 +16,9 @@ vulkan-extra-tools
 vulkan-html-docs
 vulkan-tools
 vulkan-utility-libraries
+android-emulator
+android-sdk
+android-sdk-cmdline-tools-latest
+android-sdk-platform-tools
+mesa-utils
+ninja
