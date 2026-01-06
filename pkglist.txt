@@ -63,6 +63,7 @@ hyprland
 hyprlock
 hyprpicker
 hyprpolkitagent
+hyprqt6engine
 imagemagick
 inkscape
 iptables-nft
@@ -74,6 +75,7 @@ jupyter-server-mathjax
 kdeclarative
 kdenlive
 kicad
+kile
 kitty
 lazygit
 lib2geom
@@ -152,6 +154,9 @@ speech-dispatcher
 steam
 swtpm
 swww
+texlive-fontsrecommended
+texlive-latex
+texlive-mathscience
 thunar
 thunar-archive-plugin
 thunar-volman

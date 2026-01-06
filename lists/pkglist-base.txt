@@ -41,6 +41,7 @@ hyprland
 hyprlock
 hyprpicker
 hyprpolkitagent
+hyprqt6engine
 iptables-nft
 irqbalance
 iwd

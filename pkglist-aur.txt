@@ -2,6 +2,7 @@ android-emulator
 android-sdk
 android-sdk-cmdline-tools-latest
 android-sdk-platform-tools
+hyprqt6engine
 localsend-bin
 mochi-appimage
 pacseek

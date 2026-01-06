@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#podman run -d --rm --device nvidia.com/gpu=all -v ollama:/root/.ollama -p 127.0.0.1:11434:11434 --name ollama docker.io/ollama/ollama
+podman run -d --rm --device nvidia.com/gpu=all -v ollama:/root/.ollama -p 127.0.0.1:11434:11434 --name ollama docker.io/ollama/ollama
 
 podman run -d --rm \
 	-p 127.0.0.1:3000:8080 \
@@ -14,7 +14,7 @@ podman run -d --rm \
 	--env ANONYMIZED_TELEMETRY=False \
 	-v open-webui:/app/backend/data \
 	--label io.containers.autoupdate=registry \
-	--name openweb-ui ghcr.io/open-webui/open-webui:v0.6.10
+	--name openweb-ui ghcr.io/open-webui/open-webui:v0.6.43
 
 #podman run -d --rm \
 #--name n8n-postgres \
@@ -51,11 +51,11 @@ podman run -d --rm \
 #  --name openedai-speech \
 #  ghcr.io/matatonic/openedai-speech:latest
 
-# podman run -d --rm --name kokoro-speech --device nvidia.com/gpu=all -p 127.0.0.1:9030:8880 ghcr.io/remsky/kokoro-fastapi-gpu
-#
+#podman run -d --rm --name kokoro-speech --device nvidia.com/gpu=all -p 127.0.0.1:9030:8880 ghcr.io/remsky/kokoro-fastapi-gpu
+
 
 # podman generate systemd --new --files --name n8n-postgres
 # podman generate systemd --new --files --name n8n
 # podman generate systemd --new --files --name kokoro-speech
-# podman generate systemd --new --files --name ollama
+podman generate systemd --new --files --name ollama
 podman generate systemd --new --files --name openweb-ui

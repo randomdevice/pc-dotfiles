@@ -12,6 +12,7 @@ imagemagick
 inkscape
 kdenlive
 kicad
+kile
 kitty
 libreoffice-fresh
 luanti
@@ -20,4 +21,7 @@ obsidian
 opentimelineio
 poppler-glib
 slack-desktop-wayland
+texlive-fontsrecommended
+texlive-latex
+texlive-mathscience
 torbrowser-launcher
