@@ -3,9 +3,9 @@ android-emulator
 android-sdk
 android-sdk-cmdline-tools-latest
 android-sdk-platform-tools
-ardour
 avr-gcc
 avr-libc
+awww
 base
 base-devel
 bc
@@ -27,6 +27,7 @@ cuda
 discord
 dkms
 dnsmasq
+dos2unix
 dunst
 edk2-ovmf
 efibootmgr
@@ -51,7 +52,10 @@ godot
 gpart
 gparted
 grim
+gst-libav
 gst-plugin-pipewire
+gst-plugins-bad
+gst-plugins-ugly
 guestfs-tools
 gvfs
 gvfs-afc
@@ -66,7 +70,7 @@ hyprpolkitagent
 hyprqt6engine
 imagemagick
 inkscape
-iptables-nft
+iptables
 irqbalance
 iwd
 jq
@@ -141,6 +145,7 @@ qt5-wayland
 qt6-imageformats
 qt6-wayland
 rebuild-detector
+redshift
 reflector
 rhythmbox
 rofi
@@ -151,11 +156,10 @@ slirp4netns
 slurp
 smartmontools
 speech-dispatcher
-steam
 swtpm
-swww
 texlive-fontsrecommended
 texlive-latex
+texlive-latexextra
 texlive-mathscience
 thunar
 thunar-archive-plugin
@@ -163,11 +167,13 @@ thunar-volman
 timeshift
 tmux
 torbrowser-launcher
+tree
 ttf-nerd-fonts-symbols
 ttf-nerd-fonts-symbols-common
 ttf-nerd-fonts-symbols-mono
 ttf-roboto-mono-nerd
 tumbler
+uv
 uwsm
 vim
 virt-install

@@ -52,7 +52,7 @@
 
     "custom/llm": {
         "format": "󱜙",
-        "on-click": "firefoxpwa site launch 01JYSETC9ESHMPVX9MMF8QJCBF",
+        "on-click": "firefoxpwa site launch 01KGNWJ7506GMV0ZYEWF8GXF7M",
         "tooltip": false,
     },
 
@@ -85,7 +85,7 @@
 
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "reverse-scrolling": 1,
+        "reverse-scrolling": 0,
         "format": "{volume}% {icon}  {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": "{volume}% 󰝟 {icon} {format_source}",

@@ -1,5 +1,4 @@
 com.github.tchx84.Flatseal
-com.heroicgameslauncher.hgl
 com.obsproject.Studio
 io.github.flattool.Warehouse
 org.gnome.Calculator

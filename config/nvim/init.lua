@@ -199,6 +199,16 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+-- [[ CodeCompanion AI Keymaps ]]
+vim.keymap.set({ 'n', 'v' }, '<leader>aa', '<cmd>CodeCompanionActions<cr>', { desc = '[A]I [A]ctions' })
+vim.keymap.set({ 'n', 'v' }, '<leader>ac', '<cmd>CodeCompanionChat Toggle<cr>', { desc = '[A]I [C]hat Toggle' })
+
+-- This fulfills your request: Open chat and automatically add the current file context
+vim.keymap.set('n', '<leader>af', '<cmd>CodeCompanionChat Add<cr>', { desc = '[A]I Chat with [F]ile' })
+
+-- Expand 'v'isual selection into a chat
+vim.keymap.set('v', '<leader>av', '<cmd>CodeCompanionChat<cr>', { desc = '[A]I Chat [V]isual Selection' })
+
 -- NOTE: Some terminals have colliding keymaps or are not able to send distinct keycodes
 -- vim.keymap.set("n", "<C-S-h>", "<C-w>H", { desc = "Move window to the left" })
 -- vim.keymap.set("n", "<C-S-l>", "<C-w>L", { desc = "Move window to the right" })
@@ -1036,6 +1046,135 @@ require('lazy').setup({
         },
       }
     end,
+  },
+
+  -- {
+  --   'ravitemer/mcphub.nvim',
+  --   dependencies = { 'nvim-lua/plenary.nvim' },
+  --   -- Build locally within the plugin folder to avoid global npm installs
+  --   build = 'bundled_build.lua',
+  --   config = function()
+  --     require('mcphub').setup {
+  --       -- Dynamically resolve the path to your JSON config
+  --       -- config = vim.fn.expand '$HOME/.config/nvim/mcp_servers.json',
+  --       use_bundled_binary = true,
+  --     }
+  --   end,
+  -- },
+
+  -- {
+  --   'copilotlsp-nvim/copilot-lsp',
+  --   init = function()
+  --     vim.g.copilot_nes_debounce = 500
+  --     vim.lsp.enable 'copilot_ls'
+  --     vim.keymap.set('n', '<tab>', function()
+  --       local bufnr = vim.api.nvim_get_current_buf()
+  --       local state = vim.b[bufnr].nes_state
+  --       if state then
+  --         -- Try to jump to the start of the suggestion edit.
+  --         -- If already at the start, then apply the pending suggestion and jump to the end of the edit.
+  --         local _ = require('copilot-lsp.nes').walk_cursor_start_edit()
+  --           or (require('copilot-lsp.nes').apply_pending_nes() and require('copilot-lsp.nes').walk_cursor_end_edit())
+  --         return nil
+  --       else
+  --         -- Resolving the terminal's inability to distinguish between `TAB` and `<C-i>` in normal mode
+  --         return '<C-i>'
+  --       end
+  --     end, { desc = 'Accept Copilot NES suggestion', expr = true })
+  --   end,
+  -- },
+
+  -- {
+  --   'zbirenbaum/copilot.lua', -- for providers='copilot'
+  --   cmd = 'Copilot',
+  --   event = 'InsertEnter',
+  --   config = function()
+  --     require('copilot').setup {}
+  --   end,
+  -- },
+
+  {
+    'olimorris/codecompanion.nvim',
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      'nvim-treesitter/nvim-treesitter',
+      'ravitemer/mcphub.nvim',
+      'stevearc/dressing.nvim', -- for input provider dressing
+      'folke/snacks.nvim', -- for input provider snacks
+      'nvim-tree/nvim-web-devicons', -- or echasnovski/mini.icons
+      {
+        -- Make sure to set this up properly if you have lazy=true
+        'MeanderingProgrammer/render-markdown.nvim',
+        ft = { 'markdown', 'codecompanion' },
+      },
+    },
+    opts = {
+      --adapters = {
+      --  http = {
+      --    ollama = function()
+      --      return require('codecompanion.adapters').extend('ollama', {
+      --        env = {
+      --          url = 'http://127.0.0.1:11434/api/chat',
+      --          api_key = 'Open-Source-FTW', -- Ollama doesn't need a real key, but the adapter wants a string
+      --        },
+      --        schema = {
+      --          model = {
+      --            default = 'qwen3:8b', -- Replace with your preferred local model
+      --            num_ctx = { default = 16384 },
+      --          },
+      --        },
+      --      })
+      --    end,
+      --  },
+      --},
+      strategies = {
+        chat = { adapter = 'ollama' },
+        inline = { adapter = 'ollama' },
+        agent = { adapter = 'ollama' },
+      },
+      -- Patch plain JSON tool calls from Qwen3 into OpenAI function-calling format
+      --      system = [[
+      --You are an AI coding assistant. When you need to use a tool, output a markdown code block with the following format:
+      --
+      --```tool
+      --{"recipient_name": "functions.file_search", "parameters": {"query": "init.lua"}}
+      --```
+      --
+      --Only use the tools listed in the provided tool schema. Do not invent new commands.
+      --      ]],
+      --      tool_call_patch = function(response)
+      --        local ok, obj = pcall(vim.json.decode, response)
+      --        if ok and obj and obj.name and obj.arguments then
+      --          return {
+      --            tool_calls = {
+      --              {
+      --                ['function'] = {
+      --                  name = obj.name,
+      --                  arguments = vim.json.encode(obj.arguments),
+      --                },
+      --                id = 'auto',
+      --                type = 'function',
+      --              },
+      --            },
+      --          }
+      --        end
+      --        return response
+      --      end,
+    },
+    --extensions = {
+    --  mcphub = {
+    --    callback = 'mcphub.extensions.codecompanion',
+    --    opts = {
+    --      make_tools = true, -- Automatically creates tools like @filesystem__write_file
+    --      show_server_tools_in_chat = true,
+    --      add_mcp_prefix_to_tool_names = true,
+    --      show_result_in_chat = true,
+    --      format_tool = nil,
+    --      make_vars = true, -- Allows using #resources in chat
+    --      make_slash_commands = true, -- Adds /commands from MCP prompts
+    --    },
+    --  },
+    --},
   },
 }, {
   ui = {
