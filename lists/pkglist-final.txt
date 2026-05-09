@@ -3,6 +3,7 @@ avr-libc
 awww
 brightnessctl
 chromium
+cmatrix
 discord
 dos2unix
 gimp
@@ -24,6 +25,7 @@ luanti
 mochi-appimage
 obsidian
 opentimelineio
+podman-docker
 poppler-glib
 redshift
 slack-desktop-wayland

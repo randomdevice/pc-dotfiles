@@ -22,6 +22,7 @@ chromium
 clang
 cliphist
 cmake
+cmatrix
 cpupower
 cuda
 discord
@@ -129,6 +130,7 @@ pipewire-pulse
 plocate
 podman
 podman-compose
+podman-docker
 poppler-glib
 python-matplotlib
 python-pandas

@@ -19,6 +19,7 @@ export MCP_ACCESS_DIRS=$HOME/Development/
 export EDITOR=nvim
 
 # ALIASES
+alias devpod='DOCKER_CMD=podman devcontainer'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
@@ -46,3 +47,7 @@ export PATH=/home/agax/.opencode/bin:$PATH
 
 # Added by Radicle.
 export PATH="$PATH:/home/agax/.radicle/bin"
+
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
