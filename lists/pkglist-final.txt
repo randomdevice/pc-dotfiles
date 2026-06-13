@@ -1,3 +1,4 @@
+autopep8
 avr-gcc
 avr-libc
 awww
@@ -27,6 +28,7 @@ obsidian
 opentimelineio
 podman-docker
 poppler-glib
+python-black
 redshift
 slack-desktop-wayland
 texlive-fontsrecommended

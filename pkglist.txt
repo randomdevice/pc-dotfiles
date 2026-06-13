@@ -3,6 +3,7 @@ android-emulator
 android-sdk
 android-sdk-cmdline-tools-latest
 android-sdk-platform-tools
+autopep8
 avr-gcc
 avr-libc
 awww
@@ -132,6 +133,7 @@ podman
 podman-compose
 podman-docker
 poppler-glib
+python-black
 python-matplotlib
 python-pandas
 python-pip
@@ -158,6 +160,7 @@ slirp4netns
 slurp
 smartmontools
 speech-dispatcher
+steam
 swtpm
 texlive-fontsrecommended
 texlive-latex
