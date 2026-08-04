@@ -10,6 +10,7 @@ awww
 base
 base-devel
 bc
+blender
 blueman
 bluez-utils
 breeze
@@ -198,6 +199,7 @@ wttrbar
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
 xdg-utils
+xonotic
 xorg-server
 xorg-xhost
 xorg-xinit

@@ -2,6 +2,7 @@ autopep8
 avr-gcc
 avr-libc
 awww
+blender
 brightnessctl
 chromium
 cmatrix
@@ -38,3 +39,4 @@ texlive-mathscience
 torbrowser-launcher
 tree
 uv
+xonotic

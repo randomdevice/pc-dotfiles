@@ -1,20 +1,20 @@
 #!/bin/bash
 
-podman run -d --rm --device nvidia.com/gpu=all -v ollama:/root/.ollama -p 127.0.0.1:11434:11434 --name ollama docker.io/ollama/ollama
+podman run -d --rm --device nvidia.com/gpu=all -v ollama:/root/.ollama -e OLLAMA_HOST=0.0.0.0 -p 0.0.0.1:11434:11434 --name ollama docker.io/ollama/ollama
 
-podman run -d --rm \
-	-p 127.0.0.1:3000:8080 \
-	--network=pasta:-T,11434,-T,9060,-T,9030,-T,6333,-T,6334 \
-	--add-host=ollama.local:127.0.0.1 \
-	--add-host=qdrant.local:127.0.0.1 \
-    --add-host=comfy.local:127.0.0.1 \
-    --env VECTOR_DB=qdrant \
-	--env QDRANT_URI=127.0.0.1:6333 \
-	--env OLLAMA_BASE_URL=http://ollama.local:11434 \
-	--env ANONYMIZED_TELEMETRY=False \
-	-v open-webui:/app/backend/data \
-	--label io.containers.autoupdate=registry \
-	--name openweb-ui ghcr.io/open-webui/open-webui:v0.6.43
+#podman run -d --rm \
+#	-p 127.0.0.1:3000:8080 \
+#	--network=pasta:-T,11434,-T,9060,-T,9030,-T,6333,-T,6334 \
+#	--add-host=ollama.local:127.0.0.1 \
+#	--add-host=qdrant.local:127.0.0.1 \
+#    --add-host=comfy.local:127.0.0.1 \
+#    --env VECTOR_DB=qdrant \
+#	--env QDRANT_URI=127.0.0.1:6333 \
+#	--env OLLAMA_BASE_URL=http://ollama.local:11434 \
+#	--env ANONYMIZED_TELEMETRY=False \
+#	-v open-webui:/app/backend/data \
+#	--label io.containers.autoupdate=registry \
+#	--name openweb-ui ghcr.io/open-webui/open-webui:v0.6.43
 
 #podman run -d --rm \
 #--name n8n-postgres \
@@ -40,8 +40,7 @@ podman run -d --rm \
 # --secret POSTGRES_USER,type=env,target=DB_POSTGRESDB_USER \
 # --secret POSTGRES_PASSWORD,type=env,target=DB_POSTGRESDB_PASSWORD \
 # -v n8n_data:/home/node/.n8n \
-# docker.n8n.io/n8nio/n8n
-#
+# docker.io/n8nio/n8n
 
 #podman run -d --rm --device nvidia.com/gpu=all \
 #  -p 127.0.0.1:9030:8000 \
@@ -53,9 +52,8 @@ podman run -d --rm \
 
 #podman run -d --rm --name kokoro-speech --device nvidia.com/gpu=all -p 127.0.0.1:9030:8880 ghcr.io/remsky/kokoro-fastapi-gpu
 
-
-# podman generate systemd --new --files --name n8n-postgres
-# podman generate systemd --new --files --name n8n
-# podman generate systemd --new --files --name kokoro-speech
-podman generate systemd --new --files --name ollama
-podman generate systemd --new --files --name openweb-ui
+#podman generate systemd --new --files --name n8n-postgres
+#podman generate systemd --new --files --name n8n
+#podman generate systemd --new --files --name kokoro-speech
+#podman generate systemd --new --files --name ollama
+#podman generate systemd --new --files --name openweb-ui

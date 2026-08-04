@@ -10,3 +10,4 @@ image/jpeg=org.gnome.Loupe.desktop;
 image/bmp=org.gnome.Loupe.desktop;
 application/x-zerosize=org.gnome.gitlab.somas.Apostrophe.desktop;
 text/x-tex=org.kde.kile.desktop;
+application/x-xpinstall=org.gnome.FileRoller.desktop;

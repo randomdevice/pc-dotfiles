@@ -26,6 +26,7 @@ ExecStart=/usr/bin/podman run \
 	--add-host=qdrant.local:127.0.0.1 \
 	--add-host=comfy.local:127.0.0.1 \
 	--env VECTOR_DB=qdrant \
+	--env WEBUI_AUTH=False \
 	--env QDRANT_URI=127.0.0.1:6333 \
 	--env OLLAMA_BASE_URL=http://ollama.local:11434 \
 	--env ANONYMIZED_TELEMETRY=False \
