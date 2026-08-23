@@ -40,4 +40,5 @@ texlive-mathscience
 torbrowser-launcher
 tree
 uv
+waybar-git
 xonotic

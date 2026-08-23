@@ -191,7 +191,7 @@ vulkan-extra-tools
 vulkan-html-docs
 vulkan-tools
 vulkan-utility-libraries
-waybar
+waybar-git
 wget
 wireless_tools
 wireplumber

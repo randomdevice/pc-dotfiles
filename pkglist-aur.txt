@@ -8,6 +8,7 @@ mochi-appimage
 pacseek
 rofi-emoji-git
 slack-desktop-wayland
+waybar-git
 wlogout
 wttrbar
 yay

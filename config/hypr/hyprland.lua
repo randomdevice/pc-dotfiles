@@ -102,7 +102,7 @@ hl.config({
 -- Autostart
 hl.on("hyprland.start", function()
 	hl.exec_cmd("systemctl --user start hyprpolkitagent")
-	hl.exec_cmd("udisksctl mount -b/dev/disk/by-label/primarystorage")
+	hl.exec_cmd("udisksctl mount -b /dev/disk/by-label/primarystorage")
 	hl.exec_cmd(
 		"dbus-update-activation-environment DISPLAY I3SOCK SWAYSOCK WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=Hyprland"
 	)
