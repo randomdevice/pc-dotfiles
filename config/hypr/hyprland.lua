@@ -27,16 +27,16 @@ local workspaces = require("workspaces")
 -- Set programs that you use
 
 local terminal = "kitty"
-
 local fileManager = "thunar"
-
-local menu = "rofi -show drun -theme ${HOME}/.config/rofi/launchers/type-6/style-7.rasi"
-
-local cliphist =
-	"rofi -modi clipboard:${HOME}/.config/cliphist/cliphist-rofi-img -theme ${HOME}/.config/rofi/launchers/type-6/style-7.rasi -show clipboard -show-icons"
-
-local emoji = "rofi -modi emoji -theme ${HOME}/.config/rofi/launchers/type-2/style-1.rasi -show emoji -show-icons false"
-
+local menu = "rofi -show drun -theme " .. os.getenv("HOME") .. "/.config/rofi/launchers/type-6/style-7.rasi"
+local cliphist = "rofi -modi clipboard:"
+	.. os.getenv("HOME")
+	.. "/.config/cliphist/cliphist-rofi-img -theme "
+	.. os.getenv("HOME")
+	.. "/.config/rofi/launchers/type-6/style-7.rasi -show clipboard -show-icons"
+local emoji = "rofi -modi emoji -theme "
+	.. os.getenv("HOME")
+	.. "/.config/rofi/launchers/type-2/style-1.rasi -show emoji -show-icons false"
 local browser = "firefox"
 
 -------------------------------
@@ -285,7 +285,7 @@ hl.bind(
 )
 
 hl.bind(mainMod .. " + " .. "SHIFT" .. " + " .. "P", hl.dsp.exec_cmd("hyprpicker -f hex -n -a"))
-hl.bind("Print", hl.dsp.exec_cmd('grim -g "$(slurp -d)"-| wl-copy'))
+hl.bind("Print", hl.dsp.exec_cmd('grim -g "$(slurp -d)" - | wl-copy'))
 
 -- Volume control
 hl.bind(mainMod .. " + " .. "F1", hl.dsp.exec_cmd(os.getenv("HOME") .. "/.config/volume-notif/volume.sh decrement"))

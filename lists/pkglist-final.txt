@@ -15,6 +15,7 @@ gst-libav
 gst-plugins-bad
 gst-plugins-ugly
 harvid
+hyprshutdown
 imagemagick
 inkscape
 iptables

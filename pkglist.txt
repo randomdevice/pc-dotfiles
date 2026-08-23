@@ -71,6 +71,7 @@ hyprlock
 hyprpicker
 hyprpolkitagent
 hyprqt6engine
+hyprshutdown
 imagemagick
 inkscape
 iptables
