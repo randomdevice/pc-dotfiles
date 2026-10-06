@@ -2,7 +2,10 @@ android-emulator
 android-sdk
 android-sdk-cmdline-tools-latest
 android-sdk-platform-tools
+cusparselt
 hyprqt6engine
+jupyter-server-mathjax
+libtorch-cuda
 localsend-bin
 mochi-appimage
 pacseek

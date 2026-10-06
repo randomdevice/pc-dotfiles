@@ -27,6 +27,7 @@ cmake
 cmatrix
 cpupower
 cuda
+cusparselt
 discord
 dkms
 dnsmasq
@@ -90,6 +91,7 @@ lib2geom
 libosinfo
 libpulse
 libreoffice-fresh
+libtorch-cuda
 libva-nvidia-driver
 libvirt
 linux
@@ -105,6 +107,7 @@ mediainfo
 mesa-utils
 mochi-appimage
 nano
+nccl
 neovim
 network-manager-applet
 networkmanager
@@ -118,9 +121,11 @@ ntfs-3g
 nvidia-container-toolkit
 nvidia-open-dkms
 nvidia-settings
+nvshmem
 nwg-displays
 nwg-look
 obsidian
+opencv-cuda
 opentimelineio
 otf-font-awesome
 pacseek

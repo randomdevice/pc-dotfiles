@@ -6,6 +6,7 @@ blender
 brightnessctl
 chromium
 cmatrix
+cusparselt
 discord
 dos2unix
 gimp
@@ -24,9 +25,13 @@ kicad
 kile
 kitty
 libreoffice-fresh
+libtorch-cuda
 luanti
 mochi-appimage
+nccl
+nvshmem
 obsidian
+opencv-cuda
 opentimelineio
 podman-docker
 poppler-glib
